@@ -1,0 +1,7 @@
+services:
+  - type: worker
+    name: freedns-worker
+    env: ubuntu
+    plan: free
+    buildCommand: apt-get update && apt-get install -y python3 curl
+    startCommand: ./start.sh
